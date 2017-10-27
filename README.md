@@ -4,6 +4,19 @@
 
 ### Setup
 
+## installing bouncing box with `os install`
+NOTE: If you receive an error that says, `os install command not found` the opspark CLI is not installed. To install it, enter the command `npm intall -g opspark` in your bash terminal. 
+
+* Make sure your github and cloud9 accounts are linked to Greenlight
+* Open your first website workspace
+* go to your bash terminal (located at the bottom of the cloud9 workspace) and type in the command **os install**. Hit enter.
+* If prompted, login with your github credentials
+* Use your arrow keys to highlight your course and hit enter. hit enter again to confirm.
+* Use your arrow keys to highlight bouncing-box and hit enter. hit enter again to confirm.
+* open up the index.html file and press Run at the top of your workspace. You will be editing this file.
+
+## Installation with Forking
+
 1. Fork this repository on GitHub by clicking the **Fork** button at the top right of this repository webpage.
 2. Clone the project into a Cloud9 workspace.
 3. From the `bash` terminal in the console view, cut and paste the following command:

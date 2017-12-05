@@ -7,7 +7,13 @@
     /**
      * init: Initialize all cannons.
      * 
-     * Add as many cannons as necessary to make your level challenging.
+     * Add as many cannons as necessary (at least 3) to make your level challenging. 
+     *
+     * The following functions are available to you:
+     *  cannon.create.onTop(xLocation);
+     *  cannon.create.onBottom(xLocation);
+     *  cannon.create.onLeft(yLocation);
+     *  cannon.create.onRight(yLocation);
      */ 
     cannon.init = function (game) {
         ////////////////////////////////////////////////////////////////////////

@@ -28,9 +28,15 @@ NOTE: If you receive an error that says, `os install command not found` the opsp
 
 ### Objective
 
-The idear is to design one level of a platformer game. You will create the platforms, add cannons, and collectables that Halle must collect.
+The idea is to design one level of a platformer game. You will create the platforms, add cannons, and collectables that Halle must collect.
 
 It's up to you to design a level that is challenging but doable. Consider <a href="http://phaser.io/examples/v2/category/tweens" target="_blank">tweening</a> platforms, cannons, and collectables.
+
+### Requirements
+1. You must create at least 3 cannons in different locations. 
+2. You must have at least 3 collectables of different types.
+3. You must include at least 4 platforms 
+4. Your game must be playable!
 
 ### Where to Code?
 

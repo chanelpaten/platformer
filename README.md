@@ -93,7 +93,7 @@ Have fun!
 
 GOAL: Add as many platforms necessary to make your level challenging.
 
-Find and open the file `js/init/platform.js` and use the the function `platform.create()` method to create platforms for the level. `platform.create()` takes these arguments: 
+Find and open the file `js/init/platform.js` and use the the `platform.create()` method to create platforms for the level. `platform.create()` takes these arguments: 
 
 ```javascript      
 platform.create(x, y, scaleX, scaleY);
@@ -113,7 +113,7 @@ platform.create(400, 460);
 
 GOAL: Add as many collectables as necessary (at least 3) to make your level challenging.
 
-Find and open thefile `js/init/collectable.js` and use the `collectable.create()` method to create collectables for the level.
+Find and open the file `js/init/collectable.js` and use the `collectable.create()` method to create collectables for the level.
 See the type Object, above, for the types of collectables and their point values. `collectable.create()` takes these arguments:
 
 ```javascript
@@ -136,7 +136,7 @@ collectable.create(type.steve, 200, 170, 6, 0.7);
 
 GOAL: Add as many cannons as necessary (at least 3) to make your level challenging. 
 
-The following functions are available to you:
+Find and open the file `js/init/collectable.js` and use the following methods to create cannons for the level:
 ```javascript
 cannon.create.onTop(xLocation);
 cannon.create.onBottom(xLocation);

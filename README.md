@@ -43,7 +43,7 @@ function create(x, y, scaleX, scaleY, immovable) {
 
 This function accepts 5 pieces of data: `(x, y, scaleX, scaleY, immovable)`, called **parameters**, and uses that data to create a platform which is returned by the function. 
 
-Function definitions simply define how a function operates - it does not execute the code until a **function call** is made. A function call can be made by providing same headline as the function definition but with actual data values, or **arguments**, in the place of the parameters. Here is an example of a function call to the `create` function:
+Function definitions simply define how a function operates - it does not execute the code until a **function call** is made. A function call can be made by providing the same headline as the function definition but with actual data values, or **arguments**, in the place of the parameters. Here is an example of a function call to the `create` function:
 
 ```javascript
 platform.create(400, 200, 1, 2, true);
@@ -57,7 +57,7 @@ This function call will create a platform with an (x,y) location of `(400, 200)`
 
 The goal is to design one level of a platformer game using the functions defined in the `js/factory` folder. You will call these functions in the corresponding files located in the `js/init` folder to create the platforms, add cannons, and collectables that Halle must collect.
 
-It's up to you to design a level that is challenging but doable. Consider <a href="http://phaser.io/examples/v2/category/tweens" target="_blank">tweening</a> platforms, cannons, and collectables.
+It's up to you to design a level that is challenging but doable. Consider <a href="http://phaser.io/examples/v2/category/tweens" target="_blank">tweening</a> platforms, cannons, and collectables for an additional challenge.
 
 ### Where to Code?
 

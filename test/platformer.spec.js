@@ -54,13 +54,18 @@ describe('platformer', function() {
                 
                 expect(_.every(_.slice(args, 0, 2), arg => typeof arg === 'number'), "platform.create reaquires two number arguments").to.be.true;
                 
-                if (args[0] in xLocs) {
-                    // assert each platform is in a unique location
-                    expect(xLocs[args[0]].includes(args[1]), "cannot use duplicate platform locations!").to.be.false;
+                let xLoc = args[0],
+                    yLoc = args[1];
+                
+                // assert each platform is in a unique location
+                if (xLoc in xLocs) {
+                    // if the xLocation has already been used, check to see if the yLocation has already been used as well
+                    expect(xLocs[xLoc].includes(yLoc), "cannot use duplicate platform locations!").to.be.false;
                 } else {
-                    xLocs[args[0]] = [];
+                    // if not
+                    xLocs[xLoc] = [];
                 }
-                xLocs[args[0]].push(args[1]);   
+                xLocs[xLoc].push(yLoc);   
             } 
         });
     });
@@ -95,7 +100,7 @@ describe('platformer', function() {
             onLeft = cannon.create.onLeft,
             /*
             * load the file under test: this will write
-            * the init function to the platform object.
+            * the init function to the cannon object.
             */
             fileUnderTest = require('../js/init/cannon');
         
@@ -132,9 +137,10 @@ describe('platformer', function() {
                     expect(_.every(_.slice(spyCall.args, 0, 1), arg => typeof arg === 'number')).to.be.true;
                     
                     // assert each cannon is in a unique location
-                    expect(xLocs.includes(spyCall.args[0]), "cannot have duplicate cannon locations").to.be.false
+                    let xLoc = spyCall.args[0];
+                    expect(xLocs.includes(xLoc), "cannot have duplicate cannon locations").to.be.false
 
-                    xLocs.push(spyCall.args[0]);
+                    xLocs.push(xLoc);
                 }
             }
         });
@@ -191,26 +197,30 @@ describe('platformer', function() {
                 // assert each function is called with at least two numbers as first args //
                 const spyCall = collectable.create.getCall(i);
                 const args = spyCall.args;
+                
+                let type = args[0],
+                    xLoc = args[1],
+                    yLoc = args[2];
                 // assert the first argument is a type object
-                expect((typeof args[0]  === "object"), "first argument must be a type object").to.be.true;                
+                expect((typeof type  === "object"), "first argument must be a type object").to.be.true;                
                
                 // assert the first argument is a key in the collectable type object
-                expect(type.hasOwnProperty(args[0].assetKey), "first argument must be a collectable type").to.be.true;                
+                expect(type.hasOwnProperty(type.assetKey), "first argument must be a collectable type").to.be.true;                
                 expect(_.every(_.slice(args, 1, 3), arg => typeof arg === 'number')).to.be.true;
                 
                 // assert a unique collectable is used for each call (if less than 5);
                 if (i < 5) {
-                    expect(collectablesUsed.includes(args[0].assetKey), "cannot use duplicate collectable types until each is used once").to.be.false;
+                    expect(collectablesUsed.includes(type.assetKey), "cannot use duplicate collectable types until each is used once").to.be.false;
                 }
-                collectablesUsed.push(args[0].assetKey);
+                collectablesUsed.push(type.assetKey);
 
                 // assert each platform is in a unique location
-                if (args[1] in collectableLocs) {
-                    expect(collectableLocs[args[1]].includes(args[2]), "cannot use duplicate collectable locations!").to.be.false;
+                if (xLoc in collectableLocs) {
+                    expect(collectableLocs[xLoc].includes(yLoc), "cannot use duplicate collectable locations!").to.be.false;
                 } else {
-                    collectableLocs[args[1]] = [];
+                    collectableLocs[xLoc] = [];
                 }
-                collectableLocs[args[1]].push(args[2]);   
+                collectableLocs[xLoc].push(yLoc);   
                 
             } 
         });

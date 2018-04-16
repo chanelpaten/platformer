@@ -4,7 +4,7 @@
 
 ## Setup
 
-### installing bouncing box with `os install` (Skip if installing by Forking)
+### installing Platformer with `os install` (Skip if installing by Forking)
 NOTE: If you receive an error that says, `os install command not found` the opspark CLI is not installed. To install it, enter the command `npm intall -g opspark` in your bash terminal. 
 
 * Make sure your github and cloud9 accounts are linked to Greenlight

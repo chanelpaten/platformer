@@ -12,7 +12,7 @@ NOTE: If you receive an error that says, `os install command not found` the opsp
 * go to your bash terminal (located at the bottom of the cloud9 workspace) and type in the command **os install**. Hit enter.
 * If prompted, login with your github credentials
 * Use your arrow keys to highlight your course and hit enter. hit enter again to confirm.
-* Use your arrow keys to highlight bouncing-box and hit enter. hit enter again to confirm.
+* Use your arrow keys to highlight platformer and hit enter. hit enter again to confirm.
 * open up the index.html file and press Run at the top of your workspace. You will be editing this file.
 
 ### Installation with Forking (Skip if installing with OpSpark CLI)

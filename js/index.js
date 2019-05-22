@@ -4,8 +4,9 @@ $(document).ready(function () {
     window.opspark = window.opspark || {};
     let 
         opspark = window.opspark,
-        game = opspark.createGame(create, update);
-
+        game = opspark.createGame(create, update),
+        lives = 1;
+        
     function create() {
         game.opspark.init();
         
@@ -20,7 +21,9 @@ $(document).ready(function () {
         
         opspark.player.init(game);
         
-        game.score = game.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
+        const textOpts = { fontSize: '32px', fill: '#000' };
+        game.score = game.add.text(16, 16, 'Score: 0', textOpts);
+        game.lives = game.add.text(16, 70, 'Lives: ' + lives, textOpts);
     }
 
 
@@ -37,16 +40,11 @@ $(document).ready(function () {
         
         playerManager.update();
     }
-    
-    let lives = 3;
 
     function onProjectileOverlap() {
         console.log('Halle hit!');
         game.player.die();
         decrementLives();
-        let lives = $("b").map(function () {
-            return $(this).text();
-        }).get();
         if(lives > 0){
             opspark.player.init(game);
         } 
@@ -54,13 +52,11 @@ $(document).ready(function () {
     function decrementLives(){
         if(lives !== 0){
             lives--;
-            $('.lives').text(lives)
-        } else if(lives === 0){
-            alert('GameOver! Please, refresh your browser to try again.');
+            game.lives.text = 'Lives ' + lives;            
+        } else {
+            setTimeout(() => game.lives.text = "Game Over: Refresh Your Browser to Play Again", 500);
         } 
     }
-
-    $('<b>').text(lives).attr('class', 'lives').appendTo($('body'))
 
     function collectDb(player, collectable) {
         game.score.text = 'Score: ' + (parseInt(/\s+(\S*)$/.exec(game.score.text)[1], 10) + collectable.type.points);

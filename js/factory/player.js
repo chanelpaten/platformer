@@ -4,7 +4,9 @@
     window.opspark = window.opspark || {};
     let 
         opspark = window.opspark,
-        animations = {};
+        animations = {},
+        spawnX = 30,
+        spawnY = 0;
         
     opspark.createPlayer = function (game) {
         let 
@@ -300,7 +302,7 @@
     function doNothing() { console.log('doing nothing!'); }
     
     function init(game) {
-        let asset = game.add.sprite(30, 0, 'halle');
+        let asset = game.add.sprite(spawnX, spawnY, 'halle');
         asset.anchor.setTo(.5, 1);
         
         animations.walk = asset.animations.add('walk', Phaser.Animation.generateFrameNames('walk-', 1, 30, '.png', 4), 30, true);

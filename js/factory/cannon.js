@@ -40,7 +40,7 @@
                cannon.anchor.setTo(0.5, 0.5);
                cannon.scale.y = -1;
                let projectile = createProjectile(cannon.x, cannon.y);
-               let tween = game.add.tween(projectile).to( { y: game.world.height + projectile.height }, 2000, Phaser.Easing.Bounce.Out, true, delay || 0, -1);
+               let tween = game.add.tween(projectile).to( { y: game.world.height + projectile.height }, 2000, null, true, delay || 0, -1);
                configureTween(tween, projectile, cannon);
                return cannon;
            },
@@ -52,7 +52,7 @@
                projectile.anchor.setTo(0.5, 0.5);
                projectile.scale.y = -1;
                projectile.alpha = 0;
-               let tween = game.add.tween(projectile).to( { y: 0 + projectile.height }, 2000, Phaser.Easing.Bounce.Out, true, delay || 0, -1);
+               let tween = game.add.tween(projectile).to( { y: 0 + projectile.height }, 2000, null, true, delay || 0, -1);
                configureTween(tween, projectile, cannon);
                return cannon;
            }
@@ -66,7 +66,7 @@
                projectile.anchor.setTo(0.5, 0.5);
                projectile.angle = -90;
                projectile.alpha = 0;
-               let tween = game.add.tween(projectile).to( { x: game.world.width + projectile.height }, 2000, Phaser.Easing.Bounce.Out, true, delay || 0, -1);
+               let tween = game.add.tween(projectile).to( { x: game.world.width + projectile.height }, 2000, null, true, delay || 0, -1);
                configureTween(tween, projectile, cannon);
                return cannon;
            },
@@ -79,7 +79,7 @@
                projectile.anchor.setTo(0.5, 0.5);
                projectile.angle = 90;
                projectile.alpha = 0;
-               let tween = game.add.tween(projectile).to( { x: 0 - projectile.height }, 2000, Phaser.Easing.Bounce.Out, true, delay || 0, -1);
+               let tween = game.add.tween(projectile).to( { x: 0 - projectile.height }, 2000, null, true, delay || 0, -1);
                configureTween(tween, projectile, cannon);
                return cannon;
            }

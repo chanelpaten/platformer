@@ -24,16 +24,16 @@ NOTE: If you receive an error that says, `os install command not found` the opsp
         git remote add upstream git@github.com:OperationSpark/platformer.git
     
     This will allow you to pull changes added to the origin / master - the original Operation Spark Platformer repository.
-4. Open the `index.html` file and press the green **Run** button at the top of your Cloud9 workspace. This will start a web server hosting your game, and a new pane will open up on the console view at the bottom of your Cloud9 workspace. Click on the link that appears in the console view, then select open. This will open a new brower tab running your game.
+4. Open the `index.html` file and Run your game. If you need help running your game, reach out to your Operation Spark instructor
 
 ## Functions
 
-Functions are encapsulated blocks of code that are designed to perform a set of tasks and can return a value. 
+Functions are predefined blocks of code that can accept input, perform an action, and can return a value. They can be reused many times to perform that action on command.
 
-Functions accept data, perform operations on that data, and then produce some result. A **function definition** determines what data the function accepts, what operations are performed, and what result is produced. Here is an example of a function definition called `create`:
+A **function definition** determines what data the function accepts, what operations are performed, and what value is returned. Here is an example of a function definition called `create`:
 
 ```javascript
-function create(x, y, scaleX, scaleY, immovable) {
+function createCannon(x, y, scaleX, scaleY, immovable) {
     var platform = game.platforms.create(x, y, 'platform');
     platform.scale.setTo(scaleX || 1, scaleY || 1);
     platform.body.immovable = immovable || true;
@@ -46,12 +46,10 @@ This function accepts 5 pieces of data: `(x, y, scaleX, scaleY, immovable)`, cal
 Function definitions simply define how a function operates - it does not execute the code until a **function call** is made. A function call can be made by providing the same headline as the function definition but with actual data values, or **arguments**, in the place of the parameters. Here is an example of a function call to the `create` function:
 
 ```javascript
-platform.create(400, 200, 1, 2, true);
+createCannon(400, 200, 1, 2, true);
 ```
 
 This function call will create a platform with an (x,y) location of `(400, 200)` with an X-Scale-Factor of `1`, ad Y-Scale-Factor of `2`, and the immovable property set to `true`. 
-
-*NOTE: The name of function is `create` but it is defined in the `platform` object. When we call this function from anywhere other than inside the `platform` object we must use its full name path of `platform.create`.
 
 ## Objective
 
@@ -73,7 +71,7 @@ You see instructions on **where to write your code** - keep your code in between
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
-        collectable.create(type.steve, 200, 170, 6, 0.7);
+        createCollectable(type.steve, 200, 170, 6, 0.7);
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
@@ -93,10 +91,10 @@ Have fun!
 
 GOAL: Add as many platforms necessary to make your level challenging.
 
-Find and open the file `js/init/platform.js` and use the the `platform.create()` method to create platforms for the level. `platform.create()` takes these arguments: 
+Find and open the file `js/init/platform.js` and use the the `platform.create()` Function to create platforms for the level. `createPlatform()` takes these arguments: 
 
 ```javascript      
-platform.create(x, y, scaleX, scaleY);
+createPlatform(x, y, scaleX, scaleY);
  
 x: The x coordineate for the platform.
 y: The y coordineate for the platform.
@@ -107,19 +105,20 @@ scaleY: OPTIONAL The scale factor on the y-axis, this value will stretch the pla
 Here is an example function call:
 
 ```javascript
-platform.create(400, 460);
+createPlatform(400, 460);
 ```
 #### TODO 2
 
 GOAL: Add as many collectables as necessary (at least 3) to make your level challenging.
 
-Find and open the file `js/init/collectable.js` and use the `collectable.create()` method to create collectables for the level.
-See the type Object, above, for the types of collectables and their point values. `collectable.create()` takes these arguments:
+Find and open the file `js/init/collectable.js` and use the `createCollectable()` Function to create collectables for the level.
+
+See the type Object, above, for the types of collectables and their point values. `createCollectable()` takes these arguments:
 
 ```javascript
-collectable.create(type, x, y, gravity, bounce);
+createCollectable(type, x, y, gravity, bounce);
 
-type: The type of the collectable
+type: The type of the collectable. See the type Object at the top of this file.
 x: The x coordineate for the collectable.
 y: The y coordineate for the collectable.
 gravity: OPTIONAL The gravitational pull on the collectable.
@@ -129,25 +128,28 @@ bounce: OPTIONAL A factor effecting how much the collectable will bounce off pla
 Here is an example function call:
 
 ```javascript
-collectable.create(type.steve, 200, 170, 6, 0.7);
+createCollectable(type.steve, 200, 170, 6, 0.7);
 ```
 
 #### TODO 3
 
 GOAL: Add as many cannons as necessary (at least 3) to make your level challenging. 
 
-Find and open the file `js/init/collectable.js` and use the following methods to create cannons for the level:
+Find and open the file `js/init/collectable.js` and use the `createCannon` Function to create cannons for the level. The `createCannon` Function takes these arguments:
+
 ```javascript
-cannon.create.onTop(xLocation);
-cannon.create.onBottom(xLocation);
-cannon.create.onLeft(yLocation);
-cannon.create.onRight(yLocation); 
+createCannon(type, position, delay);
+
+type: The type of cannon to be made. This can be one of the following Strings: "top", "bottom", "left", or "right"
+position: The position coordinate for the cannon along the wall it is placed.
+delay: OPTIONAL The number of milliseconds to wait before firing the first projectile
+
 ```
 
 Here is an example function call:
 
 ```javascript
-cannon.create.onTop(450);
+createCannon("top", 450);
 ```
 
 #### TODO 4

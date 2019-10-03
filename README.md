@@ -7,9 +7,9 @@
 ### installing Platformer with `os install` (Skip if installing by Forking)
 NOTE: If you receive an error that says, `os install command not found` the opspark CLI is not installed. To install it, enter the command `npm install -g opspark` in your bash terminal. 
 
-* Make sure your github and cloud9 accounts are linked to Greenlight
+* Make sure your github account is linked to Greenlight
 * Open your first website workspace
-* go to your bash terminal (located at the bottom of the cloud9 workspace) and type in the command **os install**. Hit enter.
+* go to your bash terminal (located at the bottom of the IDE workspace) and type in the command **os install**. Hit enter.
 * If prompted, login with your github credentials
 * Use your arrow keys to highlight your course and hit enter. hit enter again to confirm.
 * Use your arrow keys to highlight platformer and hit enter. hit enter again to confirm.
@@ -18,13 +18,13 @@ NOTE: If you receive an error that says, `os install command not found` the opsp
 ### Installation with Forking (Skip if installing with OpSpark CLI)
 
 1. Fork this repository on GitHub by clicking the **Fork** button at the top right of this repository webpage.
-2. Clone the project into a Cloud9 workspace.
+2. Clone the project into your IDE workspace.
 3. From the `bash` terminal in the console view, cut and paste the following command:
     
         git remote add upstream git@github.com:OperationSpark/platformer.git
     
     This will allow you to pull changes added to the origin / master - the original Operation Spark Platformer repository.
-4. Open the `index.html` file and press the green **Run** button at the top of your Cloud9 workspace. This will start a web server hosting your game, and a new pane will open up on the console view at the bottom of your Cloud9 workspace. Click on the link that appears in the console view, then select open. This will open a new brower tab running your game.
+4. Open the `index.html` file and press the green **Run** button at the top of your IDE workspace. This will start a web server hosting your game, and a new pane will open up on the console view at the bottom of your IDE workspace. Click on the link that appears in the console view, then select open. This will open a new brower tab running your game.
 
 ## Functions
 
@@ -175,4 +175,4 @@ After you've designed your level, run (cut and paste) the three following comman
 
 Great work! Pat yourselve on the back and show off your game!
 
-Remember that when you comeback to Cloud9, the webserver might have stopped, so to restart it, you must open the `index.html` file and press the green **Run** button. (See step 4 in the Setup section, above).
+Remember that when you come back to IDE, the webserver might have stopped, so to restart it, you must open the `index.html` file and press the green **Run** button. (See step 4 in the Setup section, above).

@@ -68,13 +68,13 @@ Open up 3 files:
 You see instructions on **where to write your code** - keep your code in between the areas **ALL YOUR CODE GOES BELOW HERE** and **ALL YOUR CODE GOES ABOVE HERE**. This will help you make less errors. For example:
 
 ```
-        ////////////////////////////////////////////////////////////////////////
-        // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
-        
-        createCollectable(type.steve, 200, 170, 6, 0.7);
-        
-        // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+// ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
+
+createCollectable(type.steve, 200, 170, 6, 0.7);
+
+// ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 ```
 
 Code a little, **save your work** (Command / Ctrl + s), switch back to the tab running your game and **refresh the page** (Command / Ctrl + r) to see your work!
@@ -96,12 +96,14 @@ GOAL: Add as many platforms necessary to make your level challenging.
 Find and open the file `js/init/platform.js` and use the the `platform.create()` Function to create platforms for the level. `createPlatform()` takes these arguments: 
 
 ```javascript      
+/*
 createPlatform(x, y, scaleX, scaleY);
  
 x: The x coordineate for the platform.
 y: The y coordineate for the platform.
 scaleX: OPTIONAL The scale factor on the x-axis, this value will stretch the platform in width.
 scaleY: OPTIONAL The scale factor on the y-axis, this value will stretch the platform in height.
+*/
  ```
 
 Here is an example function call:
@@ -123,6 +125,7 @@ Find and open the file `js/init/collectable.js` and use the `createCollectable()
 See the type Object, above, for the types of collectables and their point values. `createCollectable()` takes these arguments:
 
 ```javascript
+/*
 createCollectable(type, x, y, gravity, bounce);
 
 type: The type of the collectable. See the type Object at the top of this file.
@@ -130,6 +133,7 @@ x: The x coordineate for the collectable.
 y: The y coordineate for the collectable.
 gravity: OPTIONAL The gravitational pull on the collectable.
 bounce: OPTIONAL A factor effecting how much the collectable will bounce off platforms, etc.
+*/
 ```
 
 Here is an example function call:
@@ -147,12 +151,14 @@ GOAL: Add as many cannons as necessary (at least 3) to make your level challengi
 Find and open the file `js/init/collectable.js` and use the `createCannon` Function to create cannons for the level. The `createCannon` Function takes these arguments:
 
 ```javascript
+/*
 createCannon(type, position, delay);
 
 type: The type of cannon to be made. This can be one of the following Strings: "top", "bottom", "left", or "right"
 position: The position coordinate for the cannon along the wall it is placed.
 delay: OPTIONAL The number of milliseconds to wait before firing the first projectile
 
+*/
 ```
 
 Here is an example function call:

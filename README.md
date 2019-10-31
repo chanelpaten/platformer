@@ -93,7 +93,7 @@ Have fun!
 
 GOAL: Add as many platforms necessary to make your level challenging.
 
-Find and open the file `js/init/platform.js` and use the the `platform.create()` Function to create platforms for the level. `createPlatform()` takes these arguments: 
+Find and open the file `js/init/platform.js` and use the the `createPlatform()` Function to create platforms for the level. `createPlatform()` takes these arguments: 
 
 ```javascript      
 /*

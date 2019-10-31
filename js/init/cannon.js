@@ -6,25 +6,32 @@
     
     /**
      * init: Initialize all cannons.
-     * 
-     * Add as many cannons as necessary (at least 3) to make your level challenging. 
      *
-     * The following functions are available to you:
-     *  cannon.create.onTop(xLocation);
-     *  cannon.create.onBottom(xLocation);
-     *  cannon.create.onLeft(yLocation);
-     *  cannon.create.onRight(yLocation);
+     * GOAL: Add at least 3 cannons to make your level challenging. 
+     * 
+     * Use the createCannon Function to create cannons for the level. 
+     * 
+     * createCannon() takes these arguments:
+     *      
+     *      createPlatform(type, position, delay);
+     * 
+     *      type: "top", "bottom", "left", or "right"
+     *      position: The position of the cannon along whichever side the cannon is placed on
+     *          - the x coordinate for "top" and "bottom" cannons
+     *          - the y coordinate for "left" and "right" cannons
+     *      delay: OPTIONAL the number of milliseconds to wait before firing the first projectile
      */ 
-    cannon.init = function (game) {
+    function init(game) {
+        let createCannon = cannon.create;
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        cannon.create.onTop(450);
-        
+        createCannon("top", 450);
         
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     };
+    cannon.init = init;
 })(window);

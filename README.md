@@ -23,7 +23,9 @@ Find the `index.html` file. Right click it and select **Preview**.
 
 Functions are predefined blocks of code that can accept input, perform an action, and can return a value. They can be reused many times to perform that action on command.
 
-A **function definition** determines what data the function accepts, what operations are performed, and what value is returned. Here is an example of a function definition called `create`:
+A **Function Declaration** determines what data the function accepts, what operations are performed, and what value is returned. 
+
+Here is an example of a Function Declaration called `createCannon`:
 
 ```javascript
 function createCannon(x, y, scaleX, scaleY, immovable) {
@@ -34,15 +36,21 @@ function createCannon(x, y, scaleX, scaleY, immovable) {
 }
 ```
 
-This function accepts 5 pieces of data: `(x, y, scaleX, scaleY, immovable)`, called **parameters**, and uses that data to create a platform which is returned by the function. 
+This Function accepts 5 pieces of input data: `(x, y, scaleX, scaleY, immovable)`, called **Parameters**. The Function uses that data to create a platform which is returned by the Function. 
 
-Function definitions simply define how a function operates - it does not execute the code until a **function call** is made. A function call can be made by providing the same headline as the function definition but with actual data values, or **arguments**, in the place of the parameters. Here is an example of a function call to the `create` function:
+Function Declaration simply define how a function operates - it does not execute the code until a **Function Call** is made.
+
+Here is an example of a function call to the `createCannon` function:
 
 ```javascript
 createCannon(400, 200, 1, 2, true);
 ```
 
-This function call will create a platform with an (x,y) location of `(400, 200)` with an X-Scale-Factor of `1`, ad Y-Scale-Factor of `2`, and the immovable property set to `true`. 
+A function call can be made by providing the same headline as the function definition but with actual data values, or **Arguments**, in the place of the parameters. 
+
+Calling the Function tells the computer to jump into the Function Declaration and execute each line written in the `{ Code Block }` replacing each Parameter with an Argument.
+
+This Function call will create a platform with an (x,y) location of `(400, 200)` with an X-Scale-Factor of `1`, ad Y-Scale-Factor of `2`, and the immovable property set to `true`. 
 
 ## Objective
 

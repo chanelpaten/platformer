@@ -87,7 +87,9 @@ Have fun!
 3. 30% : You must include at least 5 platforms 
 4. 10% : Your game must be playable!
 
-#### TODO 1
+<hr> 
+
+## TODO 1
 
 GOAL: Add as many platforms necessary to make your level challenging.
 
@@ -105,9 +107,14 @@ scaleY: OPTIONAL The scale factor on the y-axis, this value will stretch the pla
 Here is an example function call:
 
 ```javascript
-createPlatform(400, 460);
+createPlatform(400, 460);           // normal platform
+createPlatform(300, 200, 0.3, 1)    // small horizontal platform (30% the normal width)
+createPlatform(500, 500, 0.3, 10)   // tall vertical wall (30% the normal width and 10x the height)
 ```
-#### TODO 2
+
+<hr> 
+
+## TODO 2
 
 GOAL: Add as many collectables as necessary (at least 3) to make your level challenging.
 
@@ -131,7 +138,9 @@ Here is an example function call:
 createCollectable(type.steve, 200, 170, 6, 0.7);
 ```
 
-#### TODO 3
+<hr> 
+
+## TODO 3
 
 GOAL: Add as many cannons as necessary (at least 3) to make your level challenging. 
 
@@ -151,12 +160,16 @@ Here is an example function call:
 ```javascript
 createCannon("top", 450);
 ```
+<hr> 
 
-#### TODO 4
+## TODO 4
 
 Now that you have platforms, cannons, and collectables make your game unique and challenging! In order to get full credit your project must be playable!
 
 ###
+
+
+<hr>
 
 Pushing your work back to GitHub
 

@@ -111,7 +111,9 @@ Open the `index.html` file and follow the instructions below to run your program
 
 GOAL: Add as many platforms necessary to make your level challenging.
 
-Find and open the file `js/init/platform.js` and use the the `createPlatform()` Function to create platforms for the level. `createPlatform()` takes these arguments: 
+Find and open the file `js/init/platform.js` and use the the `createPlatform()` Function to create platforms for the level. 
+
+`createPlatform()` takes these arguments: 
 
 ```javascript      
 /*
@@ -138,15 +140,15 @@ createPlatform(500, 500, 0.3, 10)   // tall vertical wall (30% the normal width 
 
 GOAL: Add as many collectables as necessary (at least 3) to make your level challenging.
 
-Find and open the file `js/init/collectable.js` and use the `createCollectable()` Function to create collectables for the level.
+Find and open the file `js/init/collectable.js` and use the `createCollectable()` Function to create collectables for the level. 
 
-See the type Object, above, for the types of collectables and their point values. `createCollectable()` takes these arguments:
+`createCollectable()` takes these arguments:
 
 ```javascript
 /*
 createCollectable(type, x, y, gravity, bounce);
 
-type: The type of the collectable. See the type Object at the top of this file.
+type: The type of the collectable. 
 x: The x coordineate for the collectable.
 y: The y coordineate for the collectable.
 gravity: OPTIONAL The gravitational pull on the collectable.
@@ -158,6 +160,16 @@ Here is an example function call:
 
 ```javascript
 createCollectable(type.steve, 200, 170, 6, 0.7);
+```
+
+Below are the following `types` available:
+
+```javascript
+type.db         // worth 10 points
+type.max        // worth 20 points
+type.steve      // worth 30 points
+type.grace      // worth 40 points
+type.kennedi    // worth 50 points
 ```
 
 <hr> 

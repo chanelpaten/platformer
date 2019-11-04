@@ -2,9 +2,18 @@
 
 ### An intro to video game programming featuring Halle in a configurable platformer
 
-# Setup
+ **Table of Contents**
+ 
+- [Installation](#installation)
+- [Objective](#objective)
+    - [Where to Code](#where-to-code)
+    - [Requirements and Grading](#requirements-and-grading)
+- [Functions](#functions)
+- [Lesson Steps](#lesson-steps)
 
-### installing Platformer with `os install` (Skip if installing by Forking)
+# Installation
+
+### installing Platformer with `os install`
 NOTE: If you receive an error that says, `os install command not found` the opspark CLI is not installed. To install it, enter the command `npm install -g opspark` in your bash terminal. 
 
 * Make sure your github account is linked to Greenlight

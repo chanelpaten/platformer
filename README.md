@@ -10,10 +10,10 @@
     - [Requirements and Grading](#requirements-and-grading)
 - [Functions](#functions)
 - [Lesson Steps](#lesson-steps)
-    - [TODO 1: Platforms](#todo-1--platforms)
-    - [TODO 2: Cannons](#todo-2--cannons)
-    - [TODO 3: Collectables](#todo-3--collectables)
-    - [TODO 4: Make your level challenging](#todo-4--make-your-level-challenging)
+    - [TODO 1: Platforms](#todo-1-platforms)
+    - [TODO 2: Cannons](#todo-2-cannons)
+    - [TODO 3: Collectables](#todo-3-collectables)
+    - [TODO 4: Make your level challenging](#todo-4-make-your-level-challenging)
 
 # Installation
 

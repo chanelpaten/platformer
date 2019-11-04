@@ -10,6 +10,10 @@
     - [Requirements and Grading](#requirements-and-grading)
 - [Functions](#functions)
 - [Lesson Steps](#lesson-steps)
+    - [TODO 1: Platforms](#todo-1--platforms)
+    - [TODO 2: Cannons](#todo-2--cannons)
+    - [TODO 3: Collectables](#todo-3--collectables)
+    - [TODO 4: Make your level challenging](#todo-4--make-your-level-challenging)
 
 # Installation
 
@@ -103,7 +107,7 @@ Open the `index.html` file and follow the instructions below to run your program
 - **Cloud9**: at the top of your window, click the **Preview** button. Then, in the top right corner of the preview window, click **Pop Out Into New Window**
 - **Codenvy**: right click on the `index.html` file in your file system and click **Preview**
 
-## TODO 1
+## TODO 1: Platforms
 
 GOAL: Add as many platforms necessary to make your level challenging.
 
@@ -130,7 +134,7 @@ createPlatform(500, 500, 0.3, 10)   // tall vertical wall (30% the normal width 
 
 <hr> 
 
-## TODO 2
+## TODO 2: Collectables
 
 GOAL: Add as many collectables as necessary (at least 3) to make your level challenging.
 
@@ -158,11 +162,11 @@ createCollectable(type.steve, 200, 170, 6, 0.7);
 
 <hr> 
 
-## TODO 3
+## TODO 3: Cannons
 
 GOAL: Add as many cannons as necessary (at least 3) to make your level challenging. 
 
-Find and open the file `js/init/collectable.js` and use the `createCannon` Function to create cannons for the level. The `createCannon` Function takes these arguments:
+Find and open the file `js/init/cannon.js` and use the `createCannon` Function to create cannons for the level. The `createCannon` Function takes these arguments:
 
 ```javascript
 /*
@@ -182,7 +186,7 @@ createCannon("top", 450);
 ```
 <hr> 
 
-## TODO 4
+## TODO 4: Make your level challenging!
 
 Now that you have platforms, cannons, and collectables make your game unique and challenging! In order to get full credit your project must be playable!
 

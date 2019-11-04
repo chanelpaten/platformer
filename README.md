@@ -2,7 +2,7 @@
 
 ### An intro to video game programming featuring Halle in a configurable platformer
 
-## Setup
+# Setup
 
 ### installing Platformer with `os install` (Skip if installing by Forking)
 NOTE: If you receive an error that says, `os install command not found` the opspark CLI is not installed. To install it, enter the command `npm install -g opspark` in your bash terminal. 
@@ -15,9 +15,44 @@ NOTE: If you receive an error that says, `os install command not found` the opsp
 * Use your arrow keys to highlight platformer and hit enter. hit enter again to confirm.
 * open up the index.html file and press Run at the top of your workspace. You will be editing this file.
 
-### Running the program
+# Objective
 
-Find the `index.html` file. Right click it and select **Preview**.
+The goal is to design one level of a platformer game using the functions defined in the `js/factory` folder. You will call these functions in the corresponding files located in the `js/init` folder to create the platforms, add cannons, and collectables that Halle must collect.
+
+It's up to you to design a level that is challenging but doable. Consider <a href="http://phaser.io/examples/v2/category/tweens" target="_blank">tweening</a> platforms, cannons, and collectables for an additional challenge.
+
+## Where to Code?
+
+Open up 3 files:
+
+1. `js/init/platform.js`: Follow the instructions outlined in the file to design all required platforms for the game level.
+2. `js/init/cannon.js`: Follow the instructions outlined in the file to design all required cannons for the game level.
+3. `js/init/collectable.js`: Follow the instructions outlined in the file to design all required collectables for the game level.
+
+You see instructions on **where to write your code** - keep your code in between the areas **ALL YOUR CODE GOES BELOW HERE** and **ALL YOUR CODE GOES ABOVE HERE**. This will help you make less errors. For example:
+
+```
+////////////////////////////////////////////////////////////////////////
+// ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
+
+createCollectable(type.steve, 200, 170, 6, 0.7);
+
+// ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+```
+
+Code a little, **save your work** (Command / Ctrl + s), switch back to the tab running your game and **refresh the page** (Command / Ctrl + r) to see your work!
+
+Have fun!
+
+## Requirements and Grading
+1. 30% : You must create at least 3 cannons in different locations. 
+2. 30% : You must have at least 3 collectables of different types.
+3. 30% : You must include at least 5 platforms 
+4. 10% : Your game must be playable!
+
+<hr> 
+
 
 ## Functions
 
@@ -52,43 +87,12 @@ Calling the Function tells the computer to jump into the Function Declaration an
 
 This Function call will create a platform with an (x,y) location of `(400, 200)` with an X-Scale-Factor of `1`, ad Y-Scale-Factor of `2`, and the immovable property set to `true`. 
 
-## Objective
+# Lesson Steps
 
-The goal is to design one level of a platformer game using the functions defined in the `js/factory` folder. You will call these functions in the corresponding files located in the `js/init` folder to create the platforms, add cannons, and collectables that Halle must collect.
-
-It's up to you to design a level that is challenging but doable. Consider <a href="http://phaser.io/examples/v2/category/tweens" target="_blank">tweening</a> platforms, cannons, and collectables for an additional challenge.
-
-### Where to Code?
-
-Open up 3 files:
-
-1. `js/init/platform.js`: Follow the instructions outlined in the file to design all required platforms for the game level.
-2. `js/init/cannon.js`: Follow the instructions outlined in the file to design all required cannons for the game level.
-3. `js/init/collectable.js`: Follow the instructions outlined in the file to design all required collectables for the game level.
-
-You see instructions on **where to write your code** - keep your code in between the areas **ALL YOUR CODE GOES BELOW HERE** and **ALL YOUR CODE GOES ABOVE HERE**. This will help you make less errors. For example:
-
-```
-////////////////////////////////////////////////////////////////////////
-// ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
-
-createCollectable(type.steve, 200, 170, 6, 0.7);
-
-// ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-```
-
-Code a little, **save your work** (Command / Ctrl + s), switch back to the tab running your game and **refresh the page** (Command / Ctrl + r) to see your work!
-
-Have fun!
-
-### Requirements and Grading
-1. 30% : You must create at least 3 cannons in different locations. 
-2. 30% : You must have at least 3 collectables of different types.
-3. 30% : You must include at least 5 platforms 
-4. 10% : Your game must be playable!
-
-<hr> 
+## Run the program
+Open the `index.html` file and follow the instructions below to run your program:
+- **Cloud9**: at the top of your window, click the **Preview** button. Then, in the top right corner of the preview window, click **Pop Out Into New Window**
+- **Codenvy**: right click on the `index.html` file in your file system and click **Preview**
 
 ## TODO 1
 

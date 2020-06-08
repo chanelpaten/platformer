@@ -209,17 +209,21 @@ Now that you have platforms, cannons, and collectables make your game unique and
 
 Pushing your work back to GitHub
 
-After you've designed your level, run (cut and paste) the three following commands:
+After you've designed your level, run (cut and paste) the four commands below:
 
-1. Add all your changes to a changeset:
+1. Change directories into your github folder. Note, the angular brackets are not a part of your code, and only serve as reference as to how you should type out this command in your terminal space. The result should look something like this: `cd hallebot.github.io` (the github username of the user in this example is hallebot). Once your command looks similar to this, press enter to move on to the next command:
+
+        cd <replace this with your github repository folder>
+
+2. Add all your changes to a changeset:
     
         git add -A
     
-2. Commit your changeset:
+3. Commit your changeset:
     
         git commit -m"create awesome platformer game"
     
-3. Push your changeset to your GitHub forked repository:
+4. Push your changeset to your GitHub forked repository:
     
         git push
     

@@ -222,7 +222,7 @@ After you've designed your level, run (cut and paste) the four commands below:
     
 3. Commit your changeset:
     
-        git commit -m"create awesome platformer game"
+        git commit -m "create awesome platformer game"
     
 4. Push your changeset to your GitHub forked repository:
     
